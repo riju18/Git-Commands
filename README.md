@@ -1,4 +1,4 @@
-# Git Commands
+# Most frequently used Git Commands
 
 ## Regular :
 + Initialize git : git init
