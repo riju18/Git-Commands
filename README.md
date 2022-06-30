@@ -66,7 +66,7 @@
   ```
 
   ```
-   git log stat
+   git log --stat
   ```
 
 ## Branch
