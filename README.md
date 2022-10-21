@@ -1,6 +1,15 @@
 # Most frequently used Git Commands
 
-## Configuration
+# index
+
++ [Configuration](#configuration)
++ [Regular-cmd](#regular-cmd)
++ [Branch](#branch)
++ [History](#history)
++ [Undo](#undo)
++ [Clean](#clean)
+
+# configuration
 
 + **Username & Email**
 
@@ -9,7 +18,7 @@
   git config --global user.email "emailAddress"
   ```
 
-## Regular
+# Regular-cmd
 
 + **Initialize git**
 
@@ -26,7 +35,11 @@
 + **Differeneces between previous & new code**
 
   ```
-  git diff or git diff hashNo1 or git diff hashNo1 hashNo2
+  git diff 
+  or, 
+  git diff hashNo1 
+  or, 
+  git diff hashNo1 hashNo2
   ```
 
 + **Add in git**
@@ -69,7 +82,7 @@
    git log --stat
   ```
 
-## Branch
+# branch
 
 + New Branch:
 
@@ -88,13 +101,19 @@
   + **Create new branch**
 
     ```
-     git branch branch-name
+     git branch branch_name
     ```
 
   + **Activate branch**
 
     ```
-     git checkout branch-name
+     git checkout branch_name
+    ```
+  
+  + **Compare branch**
+  
+    ```
+      git diff branch1 branch2
     ```
 
   + **Goto master branch**
@@ -120,19 +139,27 @@
     ```
     git push -u origin master
     ```
-  
+
++ **Rename branch**
+
+  ```
+    git branch -m old_branch_name new_branch_name
+  ```
+
 + **Delete Branch** :
 
   ```
   git branch -d branch-name ( It'll delete locally )
   git push origin --delete branch-name
 
-## History
+# history
 
-+ **All previous commit**
++ **All previous commits of the branch**
 
   ```
    git log
+   git log branch_name
+   git log --oneline
   ```
 
 + **All previous commit with statistics**
@@ -147,7 +174,7 @@
   git reflog
   ```
 
-## Undo
+# undo
 
 + Basic Undo :
   + **Undo the new changes ( It'll remove all the new changes in the particular file)**
@@ -176,7 +203,7 @@
   git reset --soft master-initial-commit-hash
   ```
 
-## Clean
+# clean
 
 + **Remove all untracked file & dir**
 
