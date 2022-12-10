@@ -72,16 +72,6 @@
   git pull origin master
   ```
 
-+ **List of all changes**
-
-  ```
-   git log
-  ```
-
-  ```
-   git log --stat
-  ```
-
 # branch
 
 + New Branch:
