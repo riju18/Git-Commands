@@ -193,6 +193,12 @@
   git reset --soft master-initial-commit-hash
   ```
 
++ **Undo after added**
+
+  ```
+  git reset fileName
+  ```
+
 # clean
 
 + **Remove all untracked file & dir**
