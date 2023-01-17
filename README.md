@@ -48,6 +48,19 @@
   git add . or git add file-name or git add -A dir-name/
   ```
 
++ **Delete file/dir**
+
+    ```
+    git rm fileName
+    git rm -rf dirName\
+    ```
+
++ **Rename file/dir**
+
+    ```
+    git mv oldFileName NewFileName
+    ```
+
 + **Commit**
 
   ```
@@ -148,9 +161,24 @@
 
   ```
    git log
-   git log branch_name
+   git log branchName
+   git log fileName
    git log --oneline
+   git log --oneline --graph --decorate
   ```
+
++ **History in timeframe**
+
+  ```
+  git log --since="2 months ago"
+  ```
+
++ **Full history of particular cmd**
+
+  ```
+  git show commitHashCode
+  ```
+
 
 + **All previous commit with statistics**
 
