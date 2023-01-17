@@ -63,13 +63,13 @@
 + **Push to repo**
 
   ```
-  git push -u origin master
+  git push -u origin branchName
   ```
 
 + **Sync changed code**
 
   ```
-  git pull origin master
+  git pull origin branchName
   ```
 
 # branch
@@ -180,7 +180,7 @@
     ```
 
 + **Delete Commit from master & add that commit in particular branch**
-  + 1st : coppy the particular hash(6-7 chars or full)
+  + 1st : copy the particular hash(6-7 chars or full)
   + 2nd : goto desired branch
 
   ```
