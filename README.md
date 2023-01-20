@@ -4,6 +4,7 @@
 
 + [Configuration](#configuration)
 + [Regular-cmd](#regular-cmd)
++ [Advanced-cmd](#advanced-cmd)
 + [Branch](#branch)
 + [History](#history)
 + [Undo](#undo)
@@ -20,19 +21,19 @@
 
 # Regular-cmd
 
-+ **Initialize git**
++ **init git**
 
   ```
   git init
   ```
 
-+ **Status**
++ **status**
 
   ```
    git status
   ```
 
-+ **Differeneces between previous & new code**
++ **differeneces between previous & new code**
 
   ```
   git diff 
@@ -42,114 +43,185 @@
   git diff hashNo1 hashNo2
   ```
 
-+ **Add in git**
++ **add in git**
 
   ```
   git add . or git add file-name or git add -A dir-name/
   ```
 
-+ **Delete file/dir**
++ **delete file/dir**
 
     ```
     git rm fileName
     git rm -rf dirName\
     ```
 
-+ **Rename file/dir**
++ **rename file/dir**
 
     ```
     git mv oldFileName NewFileName
     ```
 
-+ **Commit**
++ **commit**
 
   ```
    git commit -m "msg"
   ```
 
-+ **Link to repo**
++ **link to repo**
 
   ```
    git remote add origin repo-link
   ```
 
-+ **Push to repo**
++ **push to repo**
 
   ```
   git push -u origin branchName
   ```
 
-+ **Sync changed code**
++ **sync changed code**
 
   ```
   git pull origin branchName
   ```
 
+# advanced-cmd
+
++ **stash** : save uncommitted changes as draft.
+  
+  + init stash
+
+    ```
+    git stash
+    ```
+  
+  + save stash with msg
+
+    ```
+    git stash save "msg"
+    ```
+  
+  + show stash
+
+    ```
+    git stash show stash@{n}
+    ```
+  
+  + stash branch
+
+    ```
+    git stash branch branchName
+    ```
+  
+  + stash untracked file
+
+    ```
+    git stash -u
+    ```
+  
+  + stash all file
+
+    ```
+    git stash -a
+    ```
+  
+  + list of stash
+    
+    ```
+    git stash list
+    ```
+  
+  + aply stash
+
+    ```
+    git stash apply
+    ```
+  
+  + push to master
+
+    ```
+    git push -u origin master
+    ```
+  
+  + remove stash
+
+    ```
+    git stash drop
+    git stash pop
+    ```
+  
+  + remove last stash
+
+    ```
+    git stash pop
+    ```
+
 # branch
 
-+ New Branch:
++ **New Branch**
 
-  + **All branch**
+  + **all branch**
 
     ```
      git branch
     ```
   
-  + **All unmerged branch**
+  + **all unmerged branch**
 
     ```
     git branch -a
     ```
 
-  + **Create new branch**
+  + **create new branch**
 
     ```
      git branch branch_name
     ```
 
-  + **Activate branch**
+  + **activate branch**
 
     ```
      git checkout branch_name
     ```
   
-  + **Compare branch**
+  + **compare branch**
   
     ```
       git diff branch1 branch2
     ```
 
-  + **Goto master branch**
+  + **goto master branch**
 
     ```
     git checkout master
     ```
 
-  + **Merge with master**
+  + **merge with master**
 
     ```
     git merge branch-name
     ```
 
-  + **Check all branches merged with master**
+  + **check all branches merged with master**
 
     ```
     git branch --merged
     ```
 
-  + **Push to repo**
+  + **push to repo**
 
     ```
     git push -u origin master
     ```
 
-+ **Rename branch**
++ **rename branch**
 
   ```
     git branch -m old_branch_name new_branch_name
   ```
 
-+ **Delete Branch** :
++ **delete Branch** :
 
   ```
   git branch -d branch-name ( It'll delete locally )
@@ -157,7 +229,7 @@
 
 # history
 
-+ **All previous commits of the branch**
++ **all previous commits of the branch**
 
   ```
    git log
@@ -167,26 +239,26 @@
    git log --oneline --graph --decorate
   ```
 
-+ **History in timeframe**
++ **history in timeframe**
 
   ```
   git log --since="2 months ago"
   ```
 
-+ **Full history of particular cmd**
++ **full history of particular cmd**
 
   ```
   git show commitHashCode
   ```
 
 
-+ **All previous commit with statistics**
++ **all previous commit with statistics**
 
   ```
   git log --stat
   ```
 
-+ **Get which cmd has been made since beginning**
++ **get which cmd has been made since beginning**
 
   ```
   git reflog
@@ -195,19 +267,19 @@
 # undo
 
 + Basic Undo :
-  + **Undo the new changes ( It'll remove all the new changes in the particular file)**
+  + **undo the new changes ( It'll remove all the new changes in the particular file)**
 
     ```
     git checkout filename
     ```
 
-  + **Change the recent commit message**
+  + **change the recent commit message**
 
     ```
     git commit --amend -m "msg"
     ```
 
-+ **Delete Commit from master & add that commit in particular branch**
++ **delete Commit from master & add that commit in particular branch**
   + 1st : copy the particular hash(6-7 chars or full)
   + 2nd : goto desired branch
 
@@ -221,7 +293,7 @@
   git reset --soft master-initial-commit-hash
   ```
 
-+ **Undo after added**
++ **undo after added**
 
   ```
   git reset fileName
@@ -229,7 +301,7 @@
 
 # clean
 
-+ **Remove all untracked file & dir**
++ **remove all untracked file & dir**
 
   ```
   git clean -df
