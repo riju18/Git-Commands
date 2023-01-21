@@ -9,6 +9,7 @@
 + [History](#history)
 + [Undo](#undo)
 + [Clean](#clean)
++ [Tag](#tag)
 
 # configuration
 
@@ -127,7 +128,7 @@
     ```
   
   + list of stash
-    
+
     ```
     git stash list
     ```
@@ -251,7 +252,6 @@
   git show commitHashCode
   ```
 
-
 + **all previous commit with statistics**
 
   ```
@@ -305,4 +305,50 @@
 
   ```
   git clean -df
+  ```
+
+# tag
+
+> Tag is always created after committing. Ex : release version.
+
++ create tag
+
+  ```
+  git tag -a tagName
+  ```
+
++ tag list
+
+  ```
+  git tag --list
+  ```
+
++ show tag
+
+  ```
+  git show tagName
+  ```
+
++ difference between tag
+
+  ```
+  git diff tagName1 tagName2
+  ```
+
++ tag a particular commit
+
+  ```
+  git tag -a tagName commitCode
+  ```
+
++ update tag particular commitCode
+
+  ```
+  git tag -a tagName -f commitCode
+  ```
+
++ delete tag
+
+  ```
+  git tag --delete tagName
   ```
