@@ -10,6 +10,7 @@
 + [Undo](#undo)
 + [Clean](#clean)
 + [Tag](#tag)
++ [Seperate Brance and Merge](#seperate-branch)
 
 # configuration
 
@@ -351,4 +352,18 @@
 
   ```
   git tag --delete tagName
+  ```
+
+# seperate-branch
+
++ create seperate branch
+  ```sh
+  git checkout --orphan new-branch
+  git rm -rf .
+  ```
+
++ merge
+  ```sh
+  git checkout dev
+  git merge orphan_branch_name --allow-unrelated-histories --no-ff -m "Merge orphan branch into dev"
   ```
