@@ -10,7 +10,7 @@
 + [Undo](#undo)
 + [Clean](#clean)
 + [Tag](#tag)
-+ [Seperate Brance and Merge](#seperate-branch)
++ [Seperate Branch and Merge](#seperate-branch)
 
 # configuration
 
